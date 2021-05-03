@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloadedState = localStorage.state ?
     JSON.parse(localStorage.state) : {};
   const store = configureStore(preloadedState);
+  window.store = store; 
 
   const root = document.getElementById('content');
   ReactDOM.render(<Root store={store} />, root);

@@ -393,3 +393,332 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 332ms (Views: 330.4ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (47.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ToDoList_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (40.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ToDoList_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (168.7ms)[0m  [1m[35mCREATE DATABASE "ToDoList_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (82.1ms)[0m  [1m[35mCREATE DATABASE "ToDoList_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "to_dos" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "done" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_to_dos_on_title" ON "to_dos"  ("title")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210503181517)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-03 20:18:19.896107"], ["updated_at", "2021-05-03 20:18:19.896107"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "to_dos" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "done" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_to_dos_on_title" ON "to_dos"  ("title")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210503181517)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-03 20:18:19.987657"], ["updated_at", "2021-05-03 20:18:19.987657"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (1.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-05-03 20:18:19.995024"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mToDo Load (0.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Create (1.0ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "graduate a/A"], ["body", "finsih fullstack"], ["done", false], ["created_at", "2021-05-03 20:18:20.044308"], ["updated_at", "2021-05-03 20:18:20.044308"]]
+  ↳ db/seeds.rb:14
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "wash the dog"], ["body", "soooooap"], ["done", false], ["created_at", "2021-05-03 20:18:20.046833"], ["updated_at", "2021-05-03 20:18:20.046833"]]
+  ↳ db/seeds.rb:15
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "make dinner"], ["body", "go grocery shopping"], ["done", false], ["created_at", "2021-05-03 20:18:20.048191"], ["updated_at", "2021-05-03 20:18:20.048191"]]
+  ↳ db/seeds.rb:16
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "learn to cook"], ["body", "jack needs lessons"], ["done", false], ["created_at", "2021-05-03 20:18:20.049456"], ["updated_at", "2021-05-03 20:18:20.049456"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(438459397077336285)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(438459397077336285)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Destroy (0.5ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Destroy (0.3ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Destroy (0.2ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Destroy (0.2ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[36mToDo Create (0.5ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "graduate a/A"], ["body", "finsih fullstack"], ["done", false], ["created_at", "2021-05-03 20:18:45.252766"], ["updated_at", "2021-05-03 20:18:45.252766"]]
+  ↳ db/seeds.rb:14
+  [1m[36mToDo Create (0.3ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "wash the dog"], ["body", "soooooap"], ["done", false], ["created_at", "2021-05-03 20:18:45.254391"], ["updated_at", "2021-05-03 20:18:45.254391"]]
+  ↳ db/seeds.rb:15
+  [1m[36mToDo Create (0.3ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "make dinner"], ["body", "go grocery shopping"], ["done", false], ["created_at", "2021-05-03 20:18:45.255809"], ["updated_at", "2021-05-03 20:18:45.255809"]]
+  ↳ db/seeds.rb:16
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "learn to cook"], ["body", "jack needs lessons"], ["done", false], ["created_at", "2021-05-03 20:18:45.257371"], ["updated_at", "2021-05-03 20:18:45.257371"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+Started GET "/" for ::1 at 2021-05-03 16:21:42 -0400
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jackcusick/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2259ms (Views: 2247.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 16:23:36 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 33ms (Views: 10.4ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 16:26:48 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:40:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 486ms (Views: 467.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:41:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 373ms (Views: 367.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:41:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 369ms (Views: 364.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:42:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 331ms (Views: 327.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:43:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 453ms (Views: 435.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:44:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 344ms (Views: 338.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:46:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 416ms (Views: 411.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:57:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 433ms (Views: 427.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 16:58:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 372ms (Views: 366.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 16:58:23 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (11.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:01:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:01:14 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:02:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 350ms (Views: 341.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:02:59 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:03:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:03:14 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.8ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:04:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 316ms (Views: 310.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:04:10 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (2.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:07:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:08:15 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:08:28 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:09:45 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-05-03 17:12:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2021-05-03 17:19:00 -0400
+Processing by Api::TodosController#index as JSON
+  [1m[36mToDo Load (1.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/api/todos_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.7ms)
+
+
